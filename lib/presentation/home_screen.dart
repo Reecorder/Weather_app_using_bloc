@@ -72,11 +72,10 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
-                  child: Container(
-                    decoration: const BoxDecoration(color: Colors.transparent),
-                  ),
-                ),
+                    filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
+                    child: Container(
+                        decoration:
+                            const BoxDecoration(color: Colors.transparent))),
                 BlocBuilder<WeatherBlocBloc, WeatherBlocState>(
                   builder: (context, state) {
                     if (state is WeatherBlocSuccessState) {
